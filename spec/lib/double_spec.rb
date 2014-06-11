@@ -11,7 +11,7 @@ module HeavyWeightDoubles
           @options = options
         end
 
-        def assert_foo; true end
+        def foo_behaves?; true end
       end
 
       expect(a_class.new(foo: 'bar').foo).to eq 'bar'
@@ -28,7 +28,7 @@ module HeavyWeightDoubles
           @called = false
         end
 
-        def assert_foo
+        def foo_behaves?
           @called = true
         end
       end
@@ -67,7 +67,7 @@ module HeavyWeightDoubles
           @called = 0
         end
 
-        def assert_foo
+        def foo_behaves?
           @called += 1
           false
         end
@@ -90,7 +90,7 @@ module HeavyWeightDoubles
           @called = 0
         end
 
-        def assert_foo
+        def foo_behaves?
           @called += 1
           true
         end
